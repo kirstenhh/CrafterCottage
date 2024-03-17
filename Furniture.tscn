@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfaqoqsddnx5e"]
+
+[ext_resource type="Script" path="res://Furniture.gd" id="1_f5h7l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7rvy"]
+
+[node name="Furniture" type="StaticBody2D"]
+script = ExtResource("1_f5h7l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_q7rvy")
+
+[node name="Picture" type="Sprite2D" parent="."]

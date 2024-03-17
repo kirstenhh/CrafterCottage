@@ -1,0 +1,297 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Slot.gd" type="Script" id=1]
+[ext_resource path="res://Inventory.gd" type="Script" id=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PackedFloat32Array( 0, 0.664804, 1 )
+colors = PackedColorArray( 0.810157, 0.921875, 0.16925, 1, 0.669134, 0.230225, 0.71875, 1, 0.335735, 0.0854492, 0.4375, 1 )
+
+[sub_resource type="GradientTexture2D" id=2]
+gradient = SubResource( 1 )
+fill_to = Vector2( 0, 1 )
+
+[sub_resource type="Gradient" id=3]
+offsets = PackedFloat32Array( 0, 0.206704, 0.854749, 1 )
+colors = PackedColorArray( 1, 1, 1, 0.666667, 0.875, 0.875, 0.875, 0.562613, 0, 0, 0, 0.364706, 0.225806, 0.225806, 0.225806, 0.508159 )
+
+[sub_resource type="GradientTexture2D" id=4]
+gradient = SubResource( 3 )
+fill_to = Vector2( 1, 1 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = SubResource( 4 )
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[node name="Inventory" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 105.0
+offset_bottom = 305.0
+texture = SubResource( 2 )
+expand = true
+
+[node name="SlotsContainer" type="GridContainer" parent="."]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 93.0
+offset_bottom = 296.0
+columns = 3
+
+[node name="Slot1" type="Panel" parent="SlotsContainer"]
+offset_right = 25.0
+offset_bottom = 25.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot2" type="Panel" parent="SlotsContainer"]
+offset_left = 29.0
+offset_right = 54.0
+offset_bottom = 25.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot3" type="Panel" parent="SlotsContainer"]
+offset_left = 58.0
+offset_right = 83.0
+offset_bottom = 25.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot4" type="Panel" parent="SlotsContainer"]
+offset_top = 29.0
+offset_right = 25.0
+offset_bottom = 54.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot5" type="Panel" parent="SlotsContainer"]
+offset_left = 29.0
+offset_top = 29.0
+offset_right = 54.0
+offset_bottom = 54.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot6" type="Panel" parent="SlotsContainer"]
+offset_left = 58.0
+offset_top = 29.0
+offset_right = 83.0
+offset_bottom = 54.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot7" type="Panel" parent="SlotsContainer"]
+offset_top = 58.0
+offset_right = 25.0
+offset_bottom = 83.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot8" type="Panel" parent="SlotsContainer"]
+offset_left = 29.0
+offset_top = 58.0
+offset_right = 54.0
+offset_bottom = 83.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot9" type="Panel" parent="SlotsContainer"]
+offset_left = 58.0
+offset_top = 58.0
+offset_right = 83.0
+offset_bottom = 83.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot10" type="Panel" parent="SlotsContainer"]
+offset_top = 87.0
+offset_right = 25.0
+offset_bottom = 112.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot11" type="Panel" parent="SlotsContainer"]
+offset_left = 29.0
+offset_top = 87.0
+offset_right = 54.0
+offset_bottom = 112.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot12" type="Panel" parent="SlotsContainer"]
+offset_left = 58.0
+offset_top = 87.0
+offset_right = 83.0
+offset_bottom = 112.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot13" type="Panel" parent="SlotsContainer"]
+offset_top = 116.0
+offset_right = 25.0
+offset_bottom = 141.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot14" type="Panel" parent="SlotsContainer"]
+offset_left = 29.0
+offset_top = 116.0
+offset_right = 54.0
+offset_bottom = 141.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot15" type="Panel" parent="SlotsContainer"]
+offset_left = 58.0
+offset_top = 116.0
+offset_right = 83.0
+offset_bottom = 141.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot16" type="Panel" parent="SlotsContainer"]
+offset_top = 145.0
+offset_right = 25.0
+offset_bottom = 170.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot17" type="Panel" parent="SlotsContainer"]
+offset_left = 29.0
+offset_top = 145.0
+offset_right = 54.0
+offset_bottom = 170.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot18" type="Panel" parent="SlotsContainer"]
+offset_left = 58.0
+offset_top = 145.0
+offset_right = 83.0
+offset_bottom = 170.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot19" type="Panel" parent="SlotsContainer"]
+offset_top = 174.0
+offset_right = 25.0
+offset_bottom = 199.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot20" type="Panel" parent="SlotsContainer"]
+offset_left = 29.0
+offset_top = 174.0
+offset_right = 54.0
+offset_bottom = 199.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot21" type="Panel" parent="SlotsContainer"]
+offset_left = 58.0
+offset_top = 174.0
+offset_right = 83.0
+offset_bottom = 199.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot22" type="Panel" parent="SlotsContainer"]
+offset_top = 203.0
+offset_right = 25.0
+offset_bottom = 228.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot23" type="Panel" parent="SlotsContainer"]
+offset_left = 29.0
+offset_top = 203.0
+offset_right = 54.0
+offset_bottom = 228.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot24" type="Panel" parent="SlotsContainer"]
+offset_left = 58.0
+offset_top = 203.0
+offset_right = 83.0
+offset_bottom = 228.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot25" type="Panel" parent="SlotsContainer"]
+offset_top = 232.0
+offset_right = 25.0
+offset_bottom = 257.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot26" type="Panel" parent="SlotsContainer"]
+offset_left = 29.0
+offset_top = 232.0
+offset_right = 54.0
+offset_bottom = 257.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot27" type="Panel" parent="SlotsContainer"]
+offset_left = 58.0
+offset_top = 232.0
+offset_right = 83.0
+offset_bottom = 257.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot28" type="Panel" parent="SlotsContainer"]
+offset_top = 261.0
+offset_right = 25.0
+offset_bottom = 286.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot29" type="Panel" parent="SlotsContainer"]
+offset_left = 29.0
+offset_top = 261.0
+offset_right = 54.0
+offset_bottom = 286.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Slot30" type="Panel" parent="SlotsContainer"]
+offset_left = 58.0
+offset_top = 261.0
+offset_right = 83.0
+offset_bottom = 286.0
+custom_minimum_size = Vector2( 25, 25 )
+theme_override_styles/panel = SubResource( 5 )
+script = ExtResource( 1 )

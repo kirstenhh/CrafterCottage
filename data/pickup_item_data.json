@@ -1,0 +1,27 @@
+ {
+
+   "PinkMushroom":{
+     "MaxStackSize": 999,
+     "SpawnSize": 10,
+     "CraftItem": "no",
+     "Description": "Basic item 1 - moneymaker"
+   },
+   "Berries":{
+     "MaxStackSize": 99,
+     "SpawnSize": 30,
+     "CraftItem": "bead",
+     "Description": "Basic item 2 - bead bush"
+   },
+   "RedFlower":{
+     "MaxStackSize": 99,
+     "SpawnSize": 5,
+     "CraftItem": "yarn",
+     "Description": "Basic item 3 - woolly sheep"
+   },
+   "MagicTree":{
+     "MaxStackSize": 99,
+     "SpawnSize": 3,
+     "CraftItem": "clay",
+     "Description": "Basic item 4 - clay pit"
+   }
+ }

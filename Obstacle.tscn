@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://o4rpveak2o43"]
+
+[ext_resource type="Texture2D" uid="uid://bfu6ihovtfm1o" path="res://art/trees.png" id="1"]
+
+[sub_resource type="Gradient" id="1"]
+offsets = PackedFloat32Array(0, 0.141361, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.732811, 0.33905, 0.789062, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="2"]
+gradient = SubResource("1")
+width = 20
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(10, 13)
+
+[node name="Obstacle" type="StaticBody2D"]
+collision_layer = 2
+
+[node name="GradientSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(5, 25.25)
+scale = Vector2(1.5, 51.5)
+texture = SubResource("2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, 41)
+rotation = 1.5708
+shape = SubResource("3")
+
+[node name="Trees" type="Sprite2D" parent="."]
+position = Vector2(5, -27)
+scale = Vector2(1.93128, 1.93128)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(133, 19, 48, 80)
