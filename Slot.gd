@@ -40,7 +40,6 @@ func initialize_item(name, quantity):
 		item = ItemClass.instantiate()
 		addToSlot(item)
 	item.set_item(name, quantity)
-	print('set to '+str(quantity)+" "+name+'s')
 	item.resize_sprite(25,25)
 	
 

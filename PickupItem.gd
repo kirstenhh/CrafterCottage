@@ -36,7 +36,7 @@ func _physics_process(delta):
 func pick_up_item(body):
 	player = body
 	print("picking up "+item_name)
-	PlayerInventory.add_item(item_name, item_quantity)
+	PlayerInventory.add_item(-1, item_name, item_quantity)
 	queue_free()
 
 #resize item to fit in a box. Mostly used by inventory.

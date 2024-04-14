@@ -2,6 +2,9 @@ extends Node2D
 
 signal start_game
 
+ 
+@export var pickupitem: PackedScene
+
 @onready var camera =$Camera2D
 @onready var player = $Player
 var screen_size
@@ -13,24 +16,27 @@ var screen_size
 func _ready():
 	screen_size = get_viewport_rect().size
 	showHome()
-	
-
+	var pickupSpawn = pickupitem.instantiate()
+	pickupSpawn.set_position(player.get_position() + Vector2(12,12))
+	$Forage.add_child(pickupSpawn)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	camera.set_position(player.get_position()) 
 
 func _input(event):
 	if event.is_action_pressed("pickup"):
-		print("pickup from main!")
 		$UI/Inventory.initialize_inventory()
+	if event.is_action_pressed("toggle_scene"):
+		if $Home.visible: 
+			_on_StartButton_pressed()
+		else: 
+			_on_HomeButton_pressed()
+	#elif event.is_action_pressed("go out"):
 
 func _on_StartButton_pressed():
-	emit_signal("start_game")
-	print('pressed start')
 	showForage()
 
 func _on_SavePlacementButton_pressed():
-	print("Toggle mode")
 	$Home.editMode = !$Home.editMode
 	
 	
